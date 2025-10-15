@@ -1,253 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-slate-950">
+<html lang="en" class="min-h-screen bg-gradient-to-b from-[#022C20] via-[#022C20] to-[#04AD70]">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>DifaacSec – Coming Soon</title>
-    <link rel="icon" href="logo.svg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuardAura – Coming Soon</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { inter: ['Inter', 'sans-serif'] },
+            colors: {
+              grayish: '#D1FAE3',
+            },
+            keyframes: {
+              float1: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-18px) scale(1.08)' },
+              },
+              float2: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(22px) scale(1.04)' },
+              },
+              float3: {
+                '0%, 100%': { transform: 'translateX(0) scale(1)' },
+                '50%': { transform: 'translateX(18px) scale(1.07)' },
+              },
+              twinkle: {
+                '0%, 100%': { opacity: '0.7' },
+                '50%': { opacity: '1' },
+              },
+            },
+            animation: {
+              float1: 'float1 7s ease-in-out infinite',
+              float2: 'float2 9s ease-in-out infinite',
+              float3: 'float3 11s ease-in-out infinite',
+              twinkle: 'twinkle 2.5s ease-in-out infinite',
+            },
+          },
+        },
+      }
+    </script>
     <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .font-serif-mix {
-        font-family: "Playfair Display", "Inter", serif;
-        letter-spacing: -0.01em;
-      }
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(40px) scale(0.98);
-        }
-        100% {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      .animate-fadein-up {
-        animation: fadeInUp 1.1s cubic-bezier(0.4, 0, 0.2, 1) both;
-      }
-      .animate-fadein-up-delay {
-        animation: fadeInUp 1.1s cubic-bezier(0.4, 0, 0.2, 1) both;
-        animation-delay: 0.5s;
-      }
-      .pulse-glow {
-        box-shadow: 0 0 0 0 #38bdf8;
-        animation: pulseGlow 1.5s infinite;
-      }
-      @keyframes pulseGlow {
-        0% {
-          box-shadow: 0 0 0 0 #38bdf880;
-        }
-        70% {
-          box-shadow: 0 0 16px 8px #38bdf880;
-        }
-        100% {
-          box-shadow: 0 0 0 0 #38bdf800;
-        }
-      }
-      .glass {
-        background: rgba(30, 41, 59, 0.55);
-        backdrop-filter: blur(16px) saturate(180%);
-        border: 1.5px solid rgba(255, 255, 255, 0.09);
-      }
-      .glass-light {
-        background: rgba(255, 255, 255, 0.07);
-        backdrop-filter: blur(8px) saturate(180%);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-      }
-      .input-glass {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(6px);
-      }
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-      .animate-float {
-        animation: float 1.8s ease-in-out infinite;
-      }
-      #toast {
-        transition: opacity 0.3s;
-      }
+      html { font-family: 'Inter', sans-serif; }
     </style>
   </head>
-  <body class="h-full w-full overflow-x-hidden relative">
-    <!-- BG Gradient + Grid Overlay -->
-    <div
-      class="fixed inset-0 z-0 bg-gradient-to-br from-[#2c277a] via-[#1e293b] to-[#1e3a5c]"
-    >
-      <div
-        class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
-      ></div>
+  <body class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#022C20] via-[#022C20] to-[#04AD70] text-white overflow-hidden">
+    <!-- Animated Floating Elements -->
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <!-- Blurred dots -->
+      <div class="absolute top-10 left-10 w-16 h-16 bg-[#04AD70]/30 rounded-full blur-2xl animate-float1"></div>
+      <div class="absolute bottom-20 right-16 w-20 h-20 bg-[#D1FAE3]/20 rounded-full blur-2xl animate-float2"></div>
+      <div class="absolute top-1/2 left-1/2 w-10 h-10 bg-[#04AD70]/20 rounded-full blur-xl animate-float3"></div>
+      <div class="absolute bottom-10 left-1/4 w-8 h-8 bg-[#D1FAE3]/30 rounded-full blur-xl animate-float2"></div>
+      <div class="absolute top-1/4 right-1/3 w-12 h-12 bg-[#04AD70]/20 rounded-full blur-2xl animate-float1"></div>
+      <!-- Sparkle stars -->
+      <div class="absolute top-16 right-1/2 w-1.5 h-1.5 bg-white rounded-full opacity-80 animate-twinkle"></div>
+      <div class="absolute bottom-32 left-1/3 w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
+      <div class="absolute top-1/3 left-1/4 w-1.5 h-1.5 bg-[#D1FAE3] rounded-full opacity-70 animate-twinkle"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-1 h-1 bg-[#04AD70] rounded-full opacity-60 animate-twinkle"></div>
+      <div class="absolute top-1/4 right-10 w-1 h-1 bg-white rounded-full opacity-80 animate-twinkle"></div>
     </div>
 
-    <!-- Fullscreen Centered Content -->
-    <main
-      class="relative z-10 flex items-center justify-center min-h-screen h-screen w-full px-2"
-    >
-      <section
-        class="w-full max-w-xl glass rounded-2xl shadow-2xl border border-white/10 px-4 sm:px-8 py-6 sm:py-8 flex flex-col items-center animate-fadein-up gap-4 sm:gap-6"
-        style="animation-delay: 0.2s"
+    <!-- Main Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-lg mx-auto px-6 py-10 bg-transparent">
+   <!-- ...existing code... -->
+      <!-- Tagline Badge -->
+      <div class="mb-10">
+        <span class="inline-block text-base md:text-lg font-bold bg-white/20 text-white backdrop-blur-md rounded-2xl px-5 py-2.5 shadow-lg border border-white/10 tracking-tight"
+              style="width: fit-content;">
+          GuardAura is coming soon!🛠️
+        </span>
+      </div>
+<!-- ...existing code... -->
+      <!-- Headline -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center leading-tight mb-6">
+        Good things<br class="sm:hidden" />
+        <span class="text-white">come</span>
+        <span class="block font-normal italic text-[#D1FAE3]">to those who wait.</span>
+      </h1>
+      <!-- Subheadline -->
+      <p class="text-gray-300 text-base md:text-lg text-center mb-8 max-w-md mx-auto">
+        We’re working hard to bring you simple, strong cybersecurity solutions. Stay tuned!
+      </p>
+      <!-- Email Form -->
+      <form 
+        action="https://formsubmit.co/ff29d5d343cddb5ba4c1b6c3a90964f0" 
+        method="POST"
+        class="w-full flex flex-col sm:flex-row items-center justify-center gap-4"
+        onsubmit="this.querySelector('.thanks').classList.remove('hidden'); this.querySelector('button').disabled=true; return false;"
       >
-        <!-- Eyebrow Pill Label -->
-        <div
-          class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/70 shadow-md backdrop-blur-sm border border-white/10 text-sky-200/90 text-xs sm:text-sm font-semibold uppercase tracking-wide transition hover:bg-slate-800/80 hover:shadow-lg"
-          style="width: fit-content"
+        <input 
+          type="email" 
+          name="email" 
+          required 
+          placeholder="Your Email Address"
+          class="flex-1 px-4 py-3 rounded-xl shadow bg-white/90 text-[#022C20] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#04AD70] transition"
+        />
+        <button 
+          type="submit"
+          class="px-6 py-3 rounded-xl bg-[#04AD70] text-white font-semibold shadow hover:bg-[#06c780] transition w-full sm:w-auto"
         >
-          <i class="ph ph-lightning text-sky-300 text-base"></i>
-          Built for Somali Youth
-        </div>
-        <!-- Headline -->
-        <h1
-          class="text-2xl sm:text-3xl md:text-4xl font-serif-mix font-bold text-gray-50 text-center animate-fadein-up-delay"
-          style="animation-delay: 0.4s"
-        >
-          Master Tech Skills That <span class="text-sky-300">Actually</span> Get
-          You Hired.
-        </h1>
-        <!-- Subheadline -->
-        <p
-          class="text-gray-100/80 text-sm sm:text-base font-light text-center max-w-xl animate-fadein-up-delay"
-          style="animation-delay: 0.6s"
-        >
-          DifaacSec trains Somali youth in
-          <span class="text-sky-300 font-medium">cybersecurity</span>,
-          <span class="text-sky-300 font-medium">Linux</span>,
-          <span class="text-sky-300 font-medium">cloud</span>, and more for real
-          careers.
-        </p>
-        <!-- Waitlist Form -->
-        <form
-          name="submit-to-google-sheet"
-          class="w-full flex flex-col sm:flex-row items-center gap-2 mb-2 glass-light shadow-lg px-2 py-2 sm:py-2 rounded-xl relative animate-fadein-up-delay"
-          style="animation-delay: 0.8s"
-          autocomplete="off"
-        >
-          <input
-            type="email"
-            name="Email"
-            required
-            placeholder="your@email.com"
-            class="flex-1 input-glass text-white placeholder:text-gray-200/60 rounded-full px-4 py-2 border border-white/10 shadow-inner outline-none focus:ring-2 focus:ring-sky-400/60 transition text-sm sm:text-base font-medium"
-            autocomplete="off"
-          />
-          <button
-            type="submit"
-            id="submit-btn"
-            class="rounded-full px-5 sm:px-7 py-2 font-semibold text-sm sm:text-base shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-400/60 transition pulse-glow text-white overflow-hidden border-0"
-            style="
-              background: linear-gradient(
-                90deg,
-                #6d28d9 0%,
-                #4f46e5 60%,
-                #38bdf8 100%
-              );
-              box-shadow: 0 2px 24px 0 #4f46e540, 0 1.5px 6px 0 #38bdf880;
-            "
-          >
-            Get Notified
-          </button>
-        </form>
-        <!-- Social Proof -->
-        <div
-          class="flex items-center justify-center animate-fadein-up-delay"
-          style="animation-delay: 1s"
-        >
-          <!-- Avatars -->
-          <div class="flex -space-x-3 sm:-space-x-4 mr-2 sm:mr-3 group">
-            <img
-              src="female1.png"
-              alt="User 1"
-              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full z-10 transition-transform duration-300 group-hover:animate-float border-2 border-white/20"
-            />
-            <img
-              src="male1.png"
-              alt="User 2"
-              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full z-20 transition-transform duration-300 group-hover:animate-float border-2 border-white/20"
-              style="animation-delay: 0.2s"
-            />
-            <img
-              src="male2.png"
-              alt="User 3"
-              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full z-30 transition-transform duration-300 group-hover:animate-float border-2 border-white/20"
-              style="animation-delay: 0.4s"
-            />
-          </div>
-          <span
-            class="ml-1 sm:ml-2 text-gray-100/90 text-xs sm:text-sm font-medium"
-          >
-            ~ <span class="text-sky-300 font-bold">254+</span> Peoples already
-            joined
-          </span>
-        </div>
-      </section>
-      <!-- Toast -->
-      <div
-        id="toast"
-        class="fixed left-1/2 bottom-8 -translate-x-1/2 z-50 px-5 py-3 rounded-xl bg-slate-900/90 text-white font-semibold shadow-2xl opacity-0 pointer-events-none text-center"
-      ></div>
-    </main>
+          Get Notified
+        </button>
 
-    <script>
-      // Fade-in on load
-      window.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("opacity-100");
-      });
-
-      // Google Sheet Email Collection
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwMDLey6Gv8rfjM8--BWiRSmua3ARqJnLLROlb7DkQ8b6Rcb9ZdvY2Twq5MtJsAIYc/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const submitBtn = document.getElementById("submit-btn");
-      const toast = document.getElementById("toast");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            if (toast) {
-              toast.textContent = "Thank you for joining the waitlist! 🎉";
-              toast.className =
-                "fixed left-1/2 bottom-8 -translate-x-1/2 z-50 px-5 py-3 rounded-xl bg-sky-700/90 text-white font-semibold shadow-2xl opacity-100 pointer-events-none text-center";
-              setTimeout(() => {
-                toast.classList.remove("opacity-100");
-              }, 2600);
-            }
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Get Notified";
-          })
-          .catch((error) => {
-            if (toast) {
-              toast.textContent = "Something went wrong. Please try again.";
-              toast.className =
-                "fixed left-1/2 bottom-8 -translate-x-1/2 z-50 px-5 py-3 rounded-xl bg-red-700/90 text-white font-semibold shadow-2xl opacity-100 pointer-events-none text-center";
-              setTimeout(() => {
-                toast.classList.remove("opacity-100");
-              }, 2600);
-            }
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Get Notified";
-          });
-      });
-    </script>
+        <!-- Prevent captcha page -->
+        <input type="hidden" name="_captcha" value="false">
+      </form>
+    </div>
   </body>
 </html>
-
