@@ -1,114 +1,1114 @@
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen bg-gradient-to-b from-[#022C20] via-[#022C20] to-[#04AD70]">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- SEO Meta Tags -->
-<title>Difaacsec | Learn Practical Cybersecurity & Cloud Skills </title>
-<meta name="description" content="Master job-ready Cybersecurity and Cloud skills with Difaacsec. Hands-on, practical courses created by Abdisamad Yusuf to help you build real-world expertise and launch your tech career.">
-<meta name="keywords" content="Difaacsec, cybersecurity training, learn cybersecurity, cloud computing, IT skills, ethical hacking, Linux fundamentals, Abdisamad Yusuf, online tech courses, cybersecurity Somalia, cybersecurity Africa">
-<meta name="author" content="Abdisamad Yusuf">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DifaacSec | Hands-on Cloud & Cybersecurity Training</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+<meta name="description" content="Learn job-ready Cloud and Cybersecurity skills with DifaacSec. Practical, hands-on training for beginners and IT professionals. Enroll now and get certified.">
+<meta name="keywords" content="DifaacSec, cybersecurity training, cloud computing courses, Linux training, IT skills Somalia, hands-on cybersecurity labs, tech skills for job, online cybersecurity courses, network defense, digital skills training">
+<meta name="author" content="DifaacSec">
 <meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Open Graph (Facebook & LinkedIn) -->
-<meta property="og:title" content="Difaacsec | Learn Practical Cybersecurity & Cloud Skills with Abdisamad Yusuf">
-<meta property="og:description" content="Join Difaacsec to master hands-on cybersecurity and cloud computing skills that get you hired. Taught by Abdisamad Yusuf.">
-<meta property="og:image" content="https://kobachub.com/logo.png"> <!-- Replace with actual image URL -->
-<meta property="og:url" content="https://kobachub.com">
-<meta property="og:type" content="website">
-
-<!-- Twitter Meta -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Difaacsec | Cybersecurity & Cloud Training">
-<meta name="twitter:description" content="Learn practical cybersecurity and cloud skills with Abdisamad Yusuf through Difaacsec.">
-<meta name="twitter:image" content="https://kobachub.com/logo.png"> <!-- Replace with your course/brand image -->
-
-<!-- Canonical URL -->
 <link rel="canonical" href="https://kobachub.com/">
-    <link rel="icon" href="logo.svg" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta property="og:title" content="DifaacSec | Hands-on Cloud & Cybersecurity Training">
+<meta property="og:description" content="Master Cloud and Cybersecurity skills with DifaacSec. Practical training, hands-on labs, and certifications to advance your tech career.">
+<meta property="og:image" content="https://kobachub.com/hero.png">
+<meta property="og:url" content="https://kobachub.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+    <!-- Font Awesome Free (Brands included) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: { inter: ['Inter', 'sans-serif'] },
-            colors: { grayish: '#D1FAE3' },
-            keyframes: {
-              float1: { '0%,100%': { transform: 'translateY(0) scale(1)' }, '50%': { transform: 'translateY(-18px) scale(1.08)' } },
-              float2: { '0%,100%': { transform: 'translateY(0) scale(1)' }, '50%': { transform: 'translateY(22px) scale(1.04)' } },
-              float3: { '0%,100%': { transform: 'translateX(0) scale(1)' }, '50%': { transform: 'translateX(18px) scale(1.07)' } },
-              twinkle: { '0%,100%': { opacity: '0.7' }, '50%': { opacity: '1' } },
-            },
-            animation: {
-              float1: 'float1 7s ease-in-out infinite',
-              float2: 'float2 9s ease-in-out infinite',
-              float3: 'float3 11s ease-in-out infinite',
-              twinkle: 'twinkle 2.5s ease-in-out infinite',
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
             },
           },
         },
-      }
+      };
     </script>
     <style>
-      html { font-family: 'Inter', sans-serif; }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
-  <body class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#022C20] via-[#022C20] to-[#04AD70] text-white overflow-hidden">
-    
-    <!-- Floating Animation Elements -->
-    <div class="pointer-events-none absolute inset-0 z-0">
-      <div class="absolute top-10 left-10 w-16 h-16 bg-[#04AD70]/30 rounded-full blur-2xl animate-float1"></div>
-      <div class="absolute bottom-20 right-16 w-20 h-20 bg-[#D1FAE3]/20 rounded-full blur-2xl animate-float2"></div>
-      <div class="absolute top-1/2 left-1/2 w-10 h-10 bg-[#04AD70]/20 rounded-full blur-xl animate-float3"></div>
-      <div class="absolute bottom-10 left-1/4 w-8 h-8 bg-[#D1FAE3]/30 rounded-full blur-xl animate-float2"></div>
-      <div class="absolute top-1/4 right-1/3 w-12 h-12 bg-[#04AD70]/20 rounded-full blur-2xl animate-float1"></div>
-      <div class="absolute top-16 right-1/2 w-1.5 h-1.5 bg-white rounded-full opacity-80 animate-twinkle"></div>
-      <div class="absolute bottom-32 left-1/3 w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
-      <div class="absolute top-1/3 left-1/4 w-1.5 h-1.5 bg-[#D1FAE3] rounded-full opacity-70 animate-twinkle"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-1 h-1 bg-[#04AD70] rounded-full opacity-60 animate-twinkle"></div>
-      <div class="absolute top-1/4 right-10 w-1 h-1 bg-white rounded-full opacity-80 animate-twinkle"></div>
-    </div>
+  <body class="antialiased font-sans">
+    <!-- NAVBAR + HERO SECTION -->
+    <section
+      class="relative min-h-screen flex flex-col justify-between text-white overflow-hidden"
+    >
+      <!-- Background -->
+      <div
+        class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+      ></div>
 
-    <!-- Main Content -->
-    <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-6 py-16 sm:py-24 bg-transparent">
-      
-      <!-- Tagline Badge -->
-      <div class="mb-8 sm:mb-10">
-        <span class="inline-block text-sm sm:text-base md:text-lg font-semibold bg-white/15 text-white backdrop-blur-md rounded-2xl px-4 py-2 shadow-md border border-white/10 tracking-tight">
-          KobacHub is now DifaacSec! 🛠️
-        </span>
+      <!-- Subtle grid overlay -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0d_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0d_1px,transparent_1px)] bg-[size:14px_24px] -z-10"
+      ></div>
+
+      <!-- NAVBAR -->
+      <header class="relative z-20">
+        <div
+          class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between"
+        >
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2">
+            <img src="logo.svg" alt="DifaacSec Logo" class="h-8 w-auto" />
+          </a>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              href="#courses"
+              class="text-white/70 hover:text-white text-sm font-medium transition"
+              >Courses</a
+            >
+            <a
+              href="#faqs"
+              class="text-white/70 hover:text-white text-sm font-medium transition"
+              >FAQs</a
+            >
+            <a
+              href="#about"
+              class="text-white/70 hover:text-white text-sm font-medium transition"
+              >About Us</a
+            >
+            <a
+              href="#footer"
+              class="text-white/70 hover:text-white text-sm font-medium transition"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- CTA Button -->
+          <a
+            href="https://www.udemy.com/course/linux-fundamentals-somali/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:inline-flex items-center gap-2 bg-white/10 text-white/90 px-5 py-2.5 rounded-full font-semibold hover:bg-white hover:text-black transition"
+          >
+            Enroll for Free
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuToggle"
+            class="md:hidden text-white/80 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden absolute top-full left-0 w-full bg-black/70 backdrop-blur-lg border-t border-white/10 z-10"
+        >
+          <div class="flex flex-col items-center py-6 space-y-4">
+            <a href="#courses" class="text-white/70 hover:text-white"
+              >Courses</a
+            >
+            <a href="#faqs" class="text-white/70 hover:text-white">FAQs</a>
+            <a href="#about" class="text-white/70 hover:text-white">About Us</a>
+            <a href="#contact" class="text-white/70 hover:text-white"
+              >Contact</a
+            >
+            <a
+              href="https://www.udemy.com/course/linux-fundamentals-somali/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-white/10 text-white/90 px-5 py-2.5 rounded-full font-semibold hover:bg-white hover:text-black transition"
+            >
+              Enroll for Free
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <main
+        class="relative z-10 flex flex-col items-center text-center px-6 py-24 sm:py-32"
+      >
+        <!-- Pill Badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-sm font-medium text-white/80 mb-6"
+        >
+          ⚡️ Learn From the Top Experts
+        </div>
+
+        <!-- Headline -->
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white max-w-3xl leading-tight"
+        >
+          Master Tech Skills That
+          <span class="text-white/50 italic">Actually Get You Hired!</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="mt-6 text-lg text-white/70 max-w-xl">
+          Job-ready Cloud and Cybersecurity skills today with DifaacSec.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="mt-8">
+          <a
+            href="https://www.udemy.com/course/linux-fundamentals-somali/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white/90 font-semibold rounded-full hover:bg-white hover:text-black transition"
+          >
+            Enroll for Free
+          </a>
+        </div>
+
+        <!-- Trust Line -->
+        <div
+          class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-white/70 text-sm"
+        >
+          <div class="flex space-x-1">
+            <img
+              src="female1.png"
+              alt="Learner 1"
+              class="w-10 h-10 rounded-full border-2 border-white object-cover"
+            />
+            <img
+              src="male1.png"
+              alt="Learner 2"
+              class="w-10 h-10 rounded-full border-2 border-white object-cover"
+            />
+            <img
+              src="male2.png"
+              alt="Learner 3"
+              class="w-10 h-10 rounded-full border-2 border-white object-cover"
+            />
+          </div>
+          <div class="sm:ml-4 flex items-center gap-1">
+            <span
+              >Trusted by
+              <span class="font-semibold text-white">400+</span>
+              learners</span
+            >
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative py-24 overflow-hidden">
+      <!-- Background Layer -->
+      <div class="absolute top-0 -z-10 h-full w-full">
+        <!-- Decorative Blurred Circle -->
+        <div
+          class="absolute top-0 right-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"
+        ></div>
       </div>
 
-      <!-- Headline -->
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center leading-snug mb-6">
-        <span class="block">Master Tech Skills That</span>
-        <span class="block font-normal italic text-[#D1FAE3]">Actually Get You Hired!</span>
+      <div class="max-w-6xl mx-auto px-6">
+        <!-- Flex container for 2 columns -->
+        <div
+          class="flex flex-col lg:flex-row items-center lg:items-start gap-12 relative"
+        >
+          <!-- Left Column: Original Texts -->
+          <div class="lg:w-1/2 text-center lg:text-left z-10">
+            <!-- Badge -->
+            <div
+              class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium text-primary mb-6"
+            >
+              Empowering Tech Talent
+            </div>
+
+            <!-- Heading -->
+            <h2
+              class="text-3xl sm:text-4xl font-semibold text-black/90 mb-6 leading-snug"
+            >
+              DifaacSec is a
+              <span class="text-black">digital skills training platform</span>
+              that helps learners gain real-world expertise in
+              <span class="text-black/60"
+                >cybersecurity, cloud computing, Linux, and other essential tech
+                fields.</span
+              >
+            </h2>
+
+            <!-- Subtext -->
+            <p class="max-w-3xl text-lg text-black leading-relaxed mb-16">
+              We focus on practical, hands-on learning that prepares individuals
+              for today’s fast-growing technology careers while closing the tech
+              skills gap in Somalia and beyond.
+            </p>
+          </div>
+
+          <!-- Right Column: Hero Image with inner aura badges -->
+          <div
+            class="lg:w-1/2 relative flex justify-center lg:justify-end z-10"
+          >
+            <!-- Hero Image -->
+            <img
+              src="hero.png"
+              alt="Hero Image"
+              class="w-full max-w-md rounded-xl"
+            />
+
+            <!-- Floating Inner Aura Badges -->
+            <!-- Left Shoulder -->
+            <div
+              class="absolute top-[250px] left-[150px] px-4 py-2 bg-white/40 backdrop-blur-md rounded-full text-black text-sm font-semibold"
+            >
+              3+ Years
+            </div>
+
+            <!-- Right Shoulder -->
+            <div
+              class="absolute top-[250px] left-[350px] px-4 py-2 bg-white/40 backdrop-blur-md rounded-full text-black text-sm font-semibold"
+            >
+              400+ Students
+            </div>
+
+            <!-- Left Torso -->
+            <div
+              class="absolute top-[390px] left-[150px] px-4 py-2 bg-white/40 backdrop-blur-md rounded-full text-black text-sm font-semibold"
+            >
+              10+ Disciplines
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses" class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- Heading -->
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-black mb-4">
+          Choose Our Top <span class="text-black/70">Courses</span>
+        </h2>
+
+        <!-- Subtext -->
+        <p class="text-black/70 max-w-2xl mx-auto mb-12 text-lg">
+          Advance your career with hands-on training in cybersecurity, cloud
+          computing, and other in-demand technologies. Learn from experts and
+          gain real-world skills that set you apart.
+        </p>
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap justify-center gap-3 mb-14">
+          <button
+            class="category-btn bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-black/80 transition"
+            data-category="all"
+          >
+            All Categories
+          </button>
+          <button
+            class="category-btn bg-black/10 text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-black/20 transition"
+            data-category="Linux"
+          >
+            Linux
+          </button>
+          <button
+            class="category-btn bg-black/10 text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-black/20 transition"
+            data-category="Cloud"
+          >
+            Cloud
+          </button>
+          <button
+            class="category-btn bg-black/10 text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-black/20 transition"
+            data-category="BlueTeaming"
+          >
+            BlueTeaming
+          </button>
+          <button
+            class="category-btn bg-black/10 text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-black/20 transition"
+            data-category="RedTeaming"
+          >
+            RedTeaming
+          </button>
+        </div>
+
+        <!-- Course Cards -->
+        <div id="courseGrid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Course Card -->
+          <div
+            class="course-card bg-white rounded-2xl shadow-md border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300"
+            data-category="Linux"
+          >
+            <img
+              src="cover1.png"
+              alt="Barashada Linux"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-bold text-black mb-2">
+                Barashada Linux: Bilaw ilaa Dhamaad (Somali)
+              </h3>
+              <p class="text-black/70 text-sm mb-4">Course Description.</p>
+              <div
+                class="flex items-center justify-between text-sm text-black/70 mb-4"
+              >
+                <div class="flex items-center gap-2">
+                  <!-- Book Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black/70"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 7H20v13H6.5A2.5 2.5 0 014 17.5v-13z"
+                    />
+                  </svg>
+                  <span>10 Lessons</span>
+                </div>
+                <div class="flex items-center gap-1">⭐ <span>4.9</span></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-green-600 font-bold text-lg">FREE</span>
+                <a
+                  href="https://www.udemy.com/course/linux-fundamentals-somali/"
+                  target="_blank"
+                  class="inline-block bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-950 transition"
+                  >Enroll Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate 2 -->
+          <div
+            class="course-card bg-white rounded-2xl shadow-md border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300"
+            data-category="Linux"
+          >
+            <img
+              src="cover1.png"
+              alt="Barashada Linux"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-bold text-black mb-2">
+                Barashada Linux: Bilaw ilaa Dhamaad (Somali)
+              </h3>
+              <p class="text-black/70 text-sm mb-4">Course Description.</p>
+              <div
+                class="flex items-center justify-between text-sm text-black/70 mb-4"
+              >
+                <div class="flex items-center gap-2">
+                  <!-- Book Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black/70"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 7H20v13H6.5A2.5 2.5 0 014 17.5v-13z"
+                    />
+                  </svg>
+                  <span>10 Lessons</span>
+                </div>
+                <div class="flex items-center gap-1">⭐ <span>4.9</span></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-green-600 font-bold text-lg">FREE</span>
+                <a
+                  href="https://www.udemy.com/course/linux-fundamentals-somali/"
+                  target="_blank"
+                  class="inline-block bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-950 transition"
+                  >Enroll Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate 3 -->
+          <div
+            class="course-card bg-white rounded-2xl shadow-md border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300"
+            data-category="Linux"
+          >
+            <img
+              src="cover1.png"
+              alt="Barashada Linux"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-bold text-black mb-2">
+                Barashada Linux: Bilaw ilaa Dhamaad (Somali)
+              </h3>
+              <p class="text-black/70 text-sm mb-4">Course Description.</p>
+              <div
+                class="flex items-center justify-between text-sm text-black/70 mb-4"
+              >
+                <div class="flex items-center gap-2">
+                  <!-- Book Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black/70"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 7H20v13H6.5A2.5 2.5 0 014 17.5v-13z"
+                    />
+                  </svg>
+                  <span>10 Lessons</span>
+                </div>
+                <div class="flex items-center gap-1">⭐ <span>4.9</span></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-green-600 font-bold text-lg">FREE</span>
+                <a
+                  href="https://www.udemy.com/course/linux-fundamentals-somali/"
+                  target="_blank"
+                  class="inline-block bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-950 transition"
+                  >Enroll Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <div
+          class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium text-primary mb-6"
+        >
+          Testimonials
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#192032] mb-4">
+          Our Trusted Learners
+        </h2>
+        <p class="max-w-2xl mx-auto text-gray-600 mb-12">
+          Our mission is to empower Somali learners with hands-on tech skills
+          that lead to real-world success. Here’s what our students say about
+          DifaacSec.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6"
+          >
+            <img
+              src="male1.png"
+              alt="Ahmed Abdi"
+              class="w-16 h-16 rounded-full mx-auto object-cover mb-4"
+            />
+            <h3 class="text-lg font-semibold text-[#192032]">Ahmed Abdi</h3>
+            <p class="text-sm text-gray-500 mb-4">IT Support Specialist</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "Before joining DifaacSec's Linux course, I didn’t know how to use
+              servers or command lines. The instructors clearly explained every
+              command, and the hands-on labs helped me practice immediately. Now
+              I can set up Linux servers, manage users, and automate tasks
+              confidently."
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl transform scale-105 rotate-1 p-6 transition hover:rotate-0 hover:scale-105 hover:shadow-2xl"
+          >
+            <img
+              src="female1.png"
+              alt="Mariam Ibrahim"
+              class="w-16 h-16 rounded-full mx-auto object-cover mb-4"
+            />
+            <h3 class="text-lg font-semibold text-[#192032]">Mariam Ibrahim</h3>
+            <p class="text-sm text-gray-500 mb-4">
+              Junior System Administrator
+            </p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "I had no prior experience with Linux, but the course’s clear
+              explanations and step-by-step labs made it easy to learn. I can
+              now use commands to manage files, monitor processes, and perform
+              basic system administration."
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6"
+          >
+            <img
+              src="male3.png"
+              alt="Mohamed Hassan"
+              class="w-16 h-16 rounded-full mx-auto object-cover mb-4"
+            />
+            <h3 class="text-lg font-semibold text-[#192032]">Mohamed Hassan</h3>
+            <p class="text-sm text-gray-500 mb-4">Linux Administrator Intern</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "The course taught me Linux system administration from scratch.
+              Each lesson included real examples, so I learned to manage files,
+              permissions, services, and users. I can now handle Linux servers
+              confidently in a real IT environment."
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6"
+          >
+            <img
+              src="female2.png"
+              alt="Fatima Ali"
+              class="w-16 h-16 rounded-full mx-auto object-cover mb-4"
+            />
+            <h3 class="text-lg font-semibold text-[#192032]">Fatima Ali</h3>
+            <p class="text-sm text-gray-500 mb-4">IT Support Trainee</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "I was completely new to Linux and worried it would be too hard.
+              DifaacSec’s course explained every step in a simple way, with
+              practical exercises that I could follow. I can now navigate the
+              Linux terminal, install software, and troubleshoot errors on my
+              own."
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6"
+          >
+            <img
+              src="male2.png"
+              alt="Abdirahman Ali"
+              class="w-16 h-16 rounded-full mx-auto object-cover mb-4"
+            />
+            <h3 class="text-lg font-semibold text-[#192032]">Abdirahman Ali</h3>
+            <p class="text-sm text-gray-500 mb-4">Junior Linux Administrator</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "DifaacSec’s Linux course taught me exactly what I need for
+              entry-level Linux administration. I learned to install servers,
+              manage users, set permissions, and troubleshoot issues. The
+              practical labs made it easy to apply the skills in real
+              scenarios."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs section -->
+
+    <section id="faqs" class="bg-gradient-to-b from-white to-blue-200 py-20 text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="text-gray-500 mb-3 text-sm uppercase tracking-wide">
+          Frequently Asked Question
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-black mb-8">
+          Everything You Need to Know:
+        </h2>
+
+        <div class="flex justify-center gap-4 mb-12">
+          <button
+            class="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition"
+          >
+            Get Started
+          </button>
+          <button
+            class="border border-blue- px-6 py-2 rounded-full font-semibold text-black hover:bg-black hover:text-white transition"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4 text-left">
+          <!-- FAQ Item 1 -->
+          <div
+            class="faq-item bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+          >
+            <button
+              class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center"
+            >
+              <span>What is DifaacSec?</span>
+              <svg
+                class="faq-icon w-5 h-5 text-gray-600 transition-transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-4 text-gray-600 hidden">
+              DifaacSec is a cybersecurity learning and training platform that
+              helps beginners and professionals build real-world security skills
+              through hands-on labs and guided learning.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="faq-item bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+          >
+            <button
+              class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center"
+            >
+              <span>Who are the courses for?</span>
+              <svg
+                class="faq-icon w-5 h-5 text-gray-600 transition-transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-4 text-gray-600 hidden">
+              Our courses are designed for beginners, students, IT
+              professionals, and anyone interested in starting or growing a
+              career in cybersecurity.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="faq-item bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+          >
+            <button
+              class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center"
+            >
+              <span>Are the courses practical or just theory?</span>
+              <svg
+                class="faq-icon w-5 h-5 text-gray-600 transition-transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-4 text-gray-600 hidden">
+              They’re fully practical. You’ll practice on real systems, use
+              professional tools, and solve real-world security challenges.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="faq-item bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+          >
+            <button
+              class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center"
+            >
+              <span>Will I get a certificate after completing a course?</span>
+              <svg
+                class="faq-icon w-5 h-5 text-gray-600 transition-transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-4 text-gray-600 hidden">
+              Yes, every course comes with a DifaacSec Certificate of Completion
+              that you can share on LinkedIn or include in your resume.
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div
+            class="faq-item bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+          >
+            <button
+              class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center"
+            >
+              <span>How can I join a course?</span>
+              <svg
+                class="faq-icon w-5 h-5 text-gray-600 transition-transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content px-6 pb-4 text-gray-600 hidden">
+              You can browse our available courses on the DifaacSec website,
+              choose your preferred one, and enroll instantly. Once registered,
+              you’ll get immediate access to start learning.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- CTA -->
+<section
+  style="background-color: #000000; padding: 60px 20px; color: white"
+>
+  <div
+    class="cta-container"
+    style="
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    "
+  >
+    <!-- Left: Text -->
+    <div class="cta-text" style="flex: 1; min-width: 280px">
+      <h1 style="font-size: 2.5rem; line-height: 1.3; margin: 0">
+        Discover the full scale of <br />
+        <span
+          style="
+            display: inline-block;
+            text-decoration: underline;
+            text-decoration-color: #4603c4;
+            text-underline-offset: 3px;
+          "
+          >DifaacSec</span
+        >
+        capabilities
       </h1>
-
-      <!-- Subheadline -->
-      <p class="text-gray-300 text-base md:text-lg text-center mb-10 max-w-md mx-auto">
-        Build Job-Ready Cybersecurity and Cloud Skills with 
-        <a href="https://abdisamadjoe.com/" class="underline text-[#D1FAE3] hover:text-white transition">Abdisamad Yusuf</a>
-      </p>
-
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://www.udemy.com/course/linux-fundamentals-somali/" target="_blank"
-           class="px-6 py-3 rounded-xl bg-[#04AD70] text-white font-semibold shadow hover:bg-[#06c780] transition text-center">
-          Start the Course
-        </a>
-        <a href="https://difaacsec.abdisamadjoe.com" target="_blank"
-           class="px-6 py-3 rounded-xl bg-white/20 text-white font-semibold shadow hover:bg-white/30 transition text-center">
-          Visit the New DifaacSec Site
-        </a>
-      </div>
-
     </div>
+
+    <!-- Right: Buttons -->
+    <div class="cta-buttons" style="flex: 1; min-width: 280px; text-align: right; margin-top: 20px">
+      <a
+        href="https://discord.gg/uUyRvn75YW"
+        target="_blank"
+        style="
+          background-color: #4603c4;
+          color: #ffffff;
+          padding: 14px 28px;
+          border-radius: 8px;
+          font-weight: bold;
+          text-decoration: none;
+          margin-right: 12px;
+        "
+      >
+        Join Our Discord
+      </a>
+      <a
+        href="mailto:hello@difaacsec.com"
+        style="
+          border: 2px solid white;
+          padding: 14px 28px;
+          border-radius: 8px;
+          font-weight: bold;
+          text-decoration: none;
+          color: white;
+        "
+      >
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" style="background-color: #1c034a; color: white; padding: 60px 20px">
+  <div
+    class="footer-top"
+    style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: auto;
+    "
+  >
+    <div style="flex: 1; min-width: 200px; margin-bottom: 30px">
+      <img
+        src="logo.svg"
+        alt="DifaacSec Logo"
+        style="width: 150px; margin-bottom: 15px"
+      />
+      <p>Email: <a href="mailto:hello@difaacsec.com" style="color: #ccc">hello@difaacsec.com</a></p>
+      <p>Phone: <a href="tel:+252617548005" style="color: #ccc">+252617548005</a></p>
+    </div>
+
+    <div style="flex: 1; min-width: 150px; margin-bottom: 30px">
+      <h4>Programs</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc">
+        <li>Cybersecurity</li>
+        <li>Network Defense</li>
+        <li>Cloud Security</li>
+        <li>Forensics</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 150px; margin-bottom: 30px">
+      <h4>Solutions</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc">
+        <li>Hands-on Labs</li>
+        <li>Certifications</li>
+        <li>Real-world Projects</li>
+        <li>Mentorship</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 150px; margin-bottom: 30px">
+      <h4>Resources</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc">
+        <li><a href="https://discord.gg/uUyRvn75YW" target="_blank" style="color: #ccc">Discord Community</a></li>
+        <li>Blog</li>
+        <li>Changelog</li>
+        <li>Events</li>
+      </ul>
+    </div>
+  </div>
+
+  <div
+    class="footer-bottom"
+    style="
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    "
+  >
+    <p style="color: #888">© Copyright 2025 DifaacSec. All rights reserved.</p>
+    <ul
+      class="social"
+      style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0"
+    >
+      <li data-tooltip="Facebook">
+        <a href="https://www.facebook.com/difaacsec/" target="_blank" aria-label="Facebook" style="color: white; font-size: 20px">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li data-tooltip="LinkedIn">
+        <a href="https://www.linkedin.com/company/difaacsec" target="_blank" aria-label="LinkedIn" style="color: white; font-size: 20px">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+      <li data-tooltip="YouTube">
+        <a href="https://www.youtube.com/@LearnWithElmi" target="_blank" aria-label="YouTube" style="color: white; font-size: 20px">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+    <!-- Add Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Optional: Hover Effect CSS -->
+  <style>
+  /* Social icons hover tooltip */
+  .social li {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .social li:hover {
+    transform: translateY(-4px);
+  }
+  .social li::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  .social li:hover::before {
+    opacity: 1;
+  }
+
+  /* Mobile adjustments for CTA and footer */
+  @media (max-width: 768px) {
+    /* CTA: stack text and buttons */
+    .cta-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .cta-buttons {
+      text-align: center !important;
+      margin-top: 20px;
+    }
+
+    /* Footer top: stack columns and center them */
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-top > div {
+      margin-bottom: 30px;
+    }
+
+    /* Footer bottom: stack copyright and icons, center */
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      justify-content: center; /* center horizontally */
+    }
+  }
+</style>
+
+    <script>
+      // ===== MOBILE MENU TOGGLE =====
+      const toggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (toggle && mobileMenu) {
+        toggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        document.querySelectorAll("#mobileMenu a").forEach((link) => {
+          link.addEventListener("click", () =>
+            mobileMenu.classList.add("hidden")
+          );
+        });
+      }
+
+      // ===== COURSE CATEGORY FILTER =====
+      const buttons = document.querySelectorAll(".category-btn");
+      const cards = document.querySelectorAll(".course-card");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Reset button styles
+          buttons.forEach((b) => {
+            b.classList.remove("bg-black", "text-white");
+            b.classList.add("bg-black/10", "text-black");
+          });
+
+          // Highlight active button
+          btn.classList.add("bg-black", "text-white");
+          btn.classList.remove("bg-black/10", "text-black");
+
+          // Filter cards
+          const category = btn.getAttribute("data-category");
+          cards.forEach((card) => {
+            if (category === "all" || card.dataset.category === category) {
+              card.classList.remove("hidden");
+              card.classList.add("opacity-100", "scale-100");
+              card.classList.remove("opacity-0", "scale-95");
+            } else {
+              card.classList.add("opacity-0", "scale-95");
+              setTimeout(() => card.classList.add("hidden"), 150);
+            }
+          });
+        });
+      });
+
+      // ===== FAQ ACCORDION =====
+      const faqButtons = document.querySelectorAll(".faq-btn");
+
+      faqButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector(".faq-icon");
+
+          // Close all other FAQ items
+          document.querySelectorAll(".faq-content").forEach((item) => {
+            if (item !== content) {
+              item.classList.add("hidden");
+              const otherIcon =
+                item.previousElementSibling.querySelector(".faq-icon");
+              if (otherIcon) otherIcon.classList.remove("rotate-180");
+            }
+          });
+
+          // Toggle current FAQ
+          content.classList.toggle("hidden");
+          icon.classList.toggle("rotate-180");
+        });
+      });
+    </script>
   </body>
 </html>
-
-
-
-
