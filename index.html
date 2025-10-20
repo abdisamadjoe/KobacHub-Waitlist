@@ -166,10 +166,19 @@
       </header>
 
 <!-- Glassy Top Popup -->
-<div id="popup" class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-lg bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-xl z-50 opacity-0 transition-opacity duration-700 pointer-events-none">
+<div
+  id="popup"
+  class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-lg bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-5 text-center shadow-xl z-50 opacity-0 transition-opacity duration-700 pointer-events-none"
+>
   <h2 class="text-lg font-bold text-yellow-400 mb-2">KobacHub is now DifaacSec</h2>
-  <p class="text-white/90">Welcome to the new experience!</p>
+  <button
+    id="closePopup"
+    class="mt-1 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition"
+  >
+    Close
+  </button>
 </div>
+
 
       
       <!-- HERO -->
@@ -1181,18 +1190,30 @@
   });
 
   // ===== GLASSY TOP POPUP =====
-  // Make popup visible after page load (always visible, no dismiss)
   window.addEventListener('load', () => {
     const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closePopup');
+
     if (popup) {
+      // Show popup smoothly
       popup.classList.remove('opacity-0', 'pointer-events-none');
       popup.classList.add('opacity-100');
+
+      // Close when button clicked
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          popup.classList.add('opacity-0', 'pointer-events-none');
+          popup.classList.remove('opacity-100');
+        });
+      }
     }
   });
 </script>
 
 
+
   </body>
 </html>
+
 
 
