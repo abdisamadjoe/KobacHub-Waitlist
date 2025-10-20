@@ -165,6 +165,15 @@
         </div>
       </header>
 
+  <!-- Glassy Popup (place here, at the end of body) -->
+  <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500">
+    <div class="bg-white/30 backdrop-blur-md rounded-xl p-6 max-w-sm text-center shadow-lg border border-white/20">
+      <h2 class="text-xl font-semibold text-white mb-2">KobacHub is now DifaacSec</h2>
+      <p class="text-white/80 mb-4">Welcome to the new experience!</p>
+      <button id="closePopup" class="px-4 py-2 bg-white/20 text-white rounded hover:bg-white/30 transition">Close</button>
+    </div>
+  </div>
+      
       <!-- HERO -->
       <main
         class="relative z-10 flex flex-col items-center text-center px-6 py-24 sm:py-32"
@@ -1040,75 +1049,177 @@
   }
 </style>
 
-    <script>
-      // ===== MOBILE MENU TOGGLE =====
-      const toggle = document.getElementById("menuToggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-      if (toggle && mobileMenu) {
-        toggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-        document.querySelectorAll("#mobileMenu a").forEach((link) => {
-          link.addEventListener("click", () =>
-            mobileMenu.classList.add("hidden")
-          );
-        });
+   <script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+></script>
+
+<!-- Optional: Hover Effect CSS -->
+<style>
+/* Social icons hover tooltip */
+.social li {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.social li:hover {
+  transform: translateY(-4px);
+}
+.social li::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.social li:hover::before {
+  opacity: 1;
+}
+
+/* Mobile adjustments for CTA and footer */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-buttons {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-top > div {
+    margin-bottom: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+  // ===== MOBILE MENU TOGGLE =====
+  const toggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (toggle && mobileMenu) {
+    toggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", () =>
+        mobileMenu.classList.add("hidden")
+      );
+    });
+  }
+
+  // ===== COURSE CATEGORY FILTER =====
+  const buttons = document.querySelectorAll(".category-btn");
+  const cards = document.querySelectorAll(".course-card");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Reset button styles
+      buttons.forEach((b) => {
+        b.classList.remove("bg-black", "text-white");
+        b.classList.add("bg-black/10", "text-black");
+      });
+
+      // Highlight active button
+      btn.classList.add("bg-black", "text-white");
+      btn.classList.remove("bg-black/10", "text-black");
+
+      // Filter cards
+      const category = btn.getAttribute("data-category");
+      cards.forEach((card) => {
+        if (category === "all" || card.dataset.category === category) {
+          card.classList.remove("hidden");
+          card.classList.add("opacity-100", "scale-100");
+          card.classList.remove("opacity-0", "scale-95");
+        } else {
+          card.classList.add("opacity-0", "scale-95");
+          setTimeout(() => card.classList.add("hidden"), 150);
+        }
+      });
+    });
+  });
+
+  // ===== FAQ ACCORDION =====
+  const faqButtons = document.querySelectorAll(".faq-btn");
+
+  faqButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector(".faq-icon");
+
+      // Close all other FAQ items
+      document.querySelectorAll(".faq-content").forEach((item) => {
+        if (item !== content) {
+          item.classList.add("hidden");
+          const otherIcon =
+            item.previousElementSibling.querySelector(".faq-icon");
+          if (otherIcon) otherIcon.classList.remove("rotate-180");
+        }
+      });
+
+      // Toggle current FAQ
+      content.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    });
+  });
+
+  // ===== GLASSY POPUP =====
+  // Create popup element
+  const popup = document.getElementById('popup');
+  const closeBtn = document.getElementById('closePopup');
+
+  // Show popup after page loads
+  window.addEventListener('load', () => {
+    if (popup) {
+      popup.classList.remove('opacity-0', 'pointer-events-none');
+      popup.classList.add('opacity-100', 'pointer-events-auto');
+
+      // Optional: auto-dismiss after 5 seconds
+      setTimeout(() => {
+        popup.classList.add('opacity-0', 'pointer-events-none');
+        popup.classList.remove('opacity-100', 'pointer-events-auto');
+      }, 5000);
+    }
+  });
+
+  // Close popup on button click
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      popup.classList.add('opacity-0', 'pointer-events-none');
+      popup.classList.remove('opacity-100', 'pointer-events-auto');
+    });
+  }
+
+  // Close popup when clicking outside the card
+  if (popup) {
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.classList.add('opacity-0', 'pointer-events-none');
+        popup.classList.remove('opacity-100', 'pointer-events-auto');
       }
+    });
+  }
+</script>
 
-      // ===== COURSE CATEGORY FILTER =====
-      const buttons = document.querySelectorAll(".category-btn");
-      const cards = document.querySelectorAll(".course-card");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          // Reset button styles
-          buttons.forEach((b) => {
-            b.classList.remove("bg-black", "text-white");
-            b.classList.add("bg-black/10", "text-black");
-          });
-
-          // Highlight active button
-          btn.classList.add("bg-black", "text-white");
-          btn.classList.remove("bg-black/10", "text-black");
-
-          // Filter cards
-          const category = btn.getAttribute("data-category");
-          cards.forEach((card) => {
-            if (category === "all" || card.dataset.category === category) {
-              card.classList.remove("hidden");
-              card.classList.add("opacity-100", "scale-100");
-              card.classList.remove("opacity-0", "scale-95");
-            } else {
-              card.classList.add("opacity-0", "scale-95");
-              setTimeout(() => card.classList.add("hidden"), 150);
-            }
-          });
-        });
-      });
-
-      // ===== FAQ ACCORDION =====
-      const faqButtons = document.querySelectorAll(".faq-btn");
-
-      faqButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const content = button.nextElementSibling;
-          const icon = button.querySelector(".faq-icon");
-
-          // Close all other FAQ items
-          document.querySelectorAll(".faq-content").forEach((item) => {
-            if (item !== content) {
-              item.classList.add("hidden");
-              const otherIcon =
-                item.previousElementSibling.querySelector(".faq-icon");
-              if (otherIcon) otherIcon.classList.remove("rotate-180");
-            }
-          });
-
-          // Toggle current FAQ
-          content.classList.toggle("hidden");
-          icon.classList.toggle("rotate-180");
-        });
-      });
-    </script>
   </body>
 </html>
+
